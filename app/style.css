@@ -1,0 +1,310 @@
+/* Author: GW19 <imgw19@gmail.com>*/
+
+/* Fix user-agent */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-weight: 200;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, input {
+  font-family:
+    'HelveticaNeue-Light',
+    'Helvetica Neue Light',
+    'Helvetica Neue',
+    Helvetica,
+    Arial,
+    'Lucida Grande',
+    sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  word-wrap: break-word;
+}
+
+ul.roomList {
+  list-style: circle;
+}
+
+/* Pages */
+
+.pages {
+  font-family: "source-han-sans-traditional",sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.page {
+ /* border: #525252 solid 2px;*/
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* Login Page */
+
+.login.page {
+  background-color: #fffad3;
+  width: 100%;
+}
+
+.login.page .form {
+  height: 100px;
+  margin-top: -100px;
+  position: absolute;
+
+  text-align: center;
+  top: 25%;
+  width: 100%;
+}
+
+.login.page .form .usernameInput {
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #367ABD;
+  outline: none;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 30%;
+}
+
+.login.page .title {
+  font-size: 500%;
+  color: #EE4035;
+}
+
+.login.page .subtitle {
+  font-size: 200%;
+}
+
+.login.page .subtitle {
+  color: #367ABD;
+  font-weight: bold;
+}
+
+.login.page .usernameInput {
+  color: black;
+  font-size: 200%;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+/* Chat page */
+
+.chat.page {
+  background-color: #fffad3;
+  display: none;
+}
+
+/* Font */
+
+.messages {
+  font-size: 120%;
+}
+
+.inputMessage {
+  font-size: 100%;
+}
+
+.log {
+  color: gray;
+  font-size: 100%;
+  margin: 10px;
+  text-align: center;
+}
+
+/* Messages */
+
+.chat.page {
+  width: 75%;
+}
+
+.chatArea {
+  height: 100%;
+  padding-bottom: 100px;
+}
+
+.messages {
+  height: 100%;
+  margin: 0;
+  overflow-y: scroll;
+  padding: 10px 20px 10px 20px;
+}
+
+.message.typing .messageBody {
+  color: gray;
+}
+
+.username {
+  font-weight: 700;
+  overflow: hidden;
+  padding-right: 10px;
+  text-align: right;
+}
+
+/* Input */
+
+.inputMessage {
+  background-color: #fffad3;
+  border: 10px solid #000;
+  bottom: 0;
+  height: 60px;
+  left: 0;
+  outline: none;
+  padding-left: 10px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+/* Rooms */
+
+.room.page {
+  background-color: beige;
+  display: none;
+  height: 100%;
+  margin-left: 75%;
+  text-align: center;
+  width: 25%;
+}
+
+.room.page .room-title {
+  border-bottom: #3d3d3d solid 2px;
+  color: #3d3d3d;
+  font-size: 200%;
+  font-weight: bold;
+  padding: -10px 0 20px 0;
+}
+
+.room.page .room-hint {
+  color: #3d3d3d;
+  font-size: 120%;
+  margin: 0;
+  text-align: center;
+  padding: 0;
+}
+.room.page .room-list {
+  max-height: 80%;
+  overflow-y: scroll;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+}
+
+div.room {
+  border: #3d3d3d solid 2px;
+  border-radius: 15px;
+  color: #3d3d3d;
+  font-size: 150%;
+  font-weight: bold;
+  margin: 10px 10px 10px -20px;
+
+  /* Let text not exceed <div> */
+  overflow: auto;
+
+  padding: 10px 10px;
+  transition: 0.3s;
+}
+
+div.room:hover {
+  background: firebrick;
+  color: white;
+  cursor: pointer;
+}
+
+.joined-room {
+  background: firebrick !important;
+  color: white !important;
+  cursor: pointer !important;
+}
+
+.user-number-in-room {
+  float: right;
+}
+
+/* Tool buttons */
+
+.btn {
+  background-color: transparent;
+  border: #367ABD solid 0.12em;
+  border-radius: 100em;
+  cursor: pointer;
+  color: #3d3d3d;
+  display: block;
+  font-size: 200%;
+  font-weight: bold;
+  height: 60px;
+  overflow: auto;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  transition-delay: 0s;
+  transition-duration: 0.3s;
+  transition-property: all;
+  vertical-align: top;
+  width: 60px;
+}
+
+.btn:hover {
+  background-color: #367ABD;
+  border: #3d3d3d solid 0.12em;
+  color: #fffad3;
+}
+
+.btn:active {
+  background-color: #3d3d3d;
+  border: #367ABD solid 0.12em;
+  color: #fffad3;
+  transition-duration: 0s;
+}
+
+.btn.btn-tips {
+  right: 2em;
+  top: 1em;
+}
+
+/* Tool slides */
+
+.ui-tips {
+  background-color: whitesmoke;
+  border: #666666 solid 0.1em;
+  border-radius: 15px;
+  display: none;
+  float: left;
+  width: 26em;
+  height: 24em;
+  overflow: auto;
+  position: absolute;
+  right: 3em;
+  top: 7em;
+}
+.tips-title {
+  background-color: lightgrey;
+  border-radius: 15px 15px 0 0;
+  margin: 0;
+  padding: 0.1em;
+  text-align: center;
+}
+
+.tips h4 {
+  margin: 1%;
+}
+
+.tips {
+  color: #3d3d3d;
+  margin: 2%;
+}

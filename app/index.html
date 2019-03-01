@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang='tr'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Chat10</title>
+  <link href='style.css' rel='stylesheet' >
+
+  <script src="https://use.typekit.net/ama5eep.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+  <link rel="stylesheet"
+        href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+          integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+          crossorigin="anonymous"></script>
+
+  <script src='/socket.io/socket.io.js'></script>
+  <script src='/main.js'></script>
+</head>
+
+<body>
+  <ul class='pages' id='all-page'>
+
+    <li class='chat page' id='chat-page'>
+      <div class='chatArea'>
+        <ul class='messages'></ul>
+      </div>
+
+      <button class='btn btn-tips' title='Hints'>?</button>
+
+      <div id='effect-tips' class='ui-tips'>
+        <h3 class='tips-title'>İpucu</h3>
+        <div class='tips'>
+          <h3>Sistem Mesajı</h3>
+          <h4>/join [oda adı]：create / join room</h4>
+          (oda ismi 1 ile 14 karakter arasında olabilir)<br><br>
+          <h4>/ls：refresh oda listesi</h4>
+          (sistemde bulunan oda listesi)<br>
+          <br>
+        </div>
+      </div>
+
+      <input class='inputMessage' placeholder='Mesaj yaz...'/>
+    </li>
+
+    <li class='login page' id='login-page'>
+      <div class='form'>
+        <h1 class='title'>Chat10</h1>
+        <h3 class='subtitle'>Kullanıcı adı</h3>
+        <label>
+          <input class='usernameInput' type='text' minlength='1' maxlength='14'
+                 title='kullanıcı adı (1-14 karakter)' autofocus/>
+        </label>
+      </div>
+    </li>
+
+    <li class='room page' id='room-page'>
+      <h1 class='room-title'>Oda Listesi</h1>
+      <p class='room-hint'>Odaya katılmak için oda bloğunu tıklayın.</p>
+      <ul class='room-list'></ul>
+    </li>
+
+  </ul>
+
+</body>
+</html>
